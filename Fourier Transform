@@ -1,0 +1,10 @@
+t = 0:0.01:10;
+n = 5; 
+A = 0.5;
+signal = zeros(size(t)) + A/2;
+for i = 1:n
+    signal = signal + (4*A/pi)*sin(((2*i)-1)*pi*t)/(((2*i)-1)*pi);
+end
+figure,
+plot(t,signal,'r','LineWidth',1),grid on
+xlabel('Time [seconds]'),ylabel('Amplitude [voltage]')
